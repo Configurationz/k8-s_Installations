@@ -25,7 +25,7 @@ wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.4/cri-docker
 sudo dpkg -i cri-dockerd_0.3.4.3-0.ubuntu-focal_amd64.deb
 ```
 
-3. Install _[go](https://go.dev/doc/install)_ by executing below commands on all the nodes _[go Installations]( https://github.com/Mirantis/cri-dockerd.git)_
+3. Install _[go](https://go.dev/doc/install)_ by executing below commands on all the nodes _[go Installations]( https://github.com/Mirantis/cri-dockerd)_
 ```bash
 sudo -i
 wget https://go.dev/dl/go1.21.1.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz
@@ -115,7 +115,7 @@ kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/
 kubectl get nodes -w 
 ```
 
-11.  Autocomplete kubectl commands in command line _[kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)_
+11.  Autocomplete kubectl commands in command line using _[kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)_
 ```bash
 source <(kubectl completion bash)
 echo "source <(kubectl completion bash)" >> ~/.bashrc
