@@ -1,6 +1,6 @@
 
-kubernetes Installation steps for both Master & Nodes 
-------------------------------------------------------
+kubernetes Installation in ubuntu 20.04 for both Master & Nodes 
+---------------------------------------------------------------
 
 * Create few nodes (>1)
   * Install docker on each node
@@ -60,7 +60,7 @@ exit
 exit
 ```
 
-5. Relogin & initialize the cluster using the following command as a root user making one node [Master/Control Plane](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) to create a cluster, login into a Master node and execute the following
+5. Relogin & initialize the cluster using the following command as a root user making one node _[Master/control-plane](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)_ to create a cluster, login into a Master node and execute the following
 ```bash
 sudo -i
 kubeadm init --pod-network-cidr=10.244.0.0/16 --cri-socket=unix:///var/run/cri-dockerd.sock
