@@ -60,7 +60,7 @@ exit
 exit
 ```
 
-5. Relogin & initialize the cluster using the following command as a root user [Making one node master/control plane]
+5. Relogin & initialize the cluster using the following command as a root user making one node [Master/Control Plane](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) to create a cluster, login into a Master node and execute the following
 ```bash
 sudo -i
 kubeadm init –pod-network-cidr=10.244.0.0/16 --cri-socket=unix:///var/run/cri-dockerd.sock
