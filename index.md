@@ -1,6 +1,8 @@
 kubernetes Installation steps for both Master & Nodes 
 ------------------------------------------------------
 
+![Preview](./imgs/realk8.png)
+
 * Create few nodes (>1)
   * Install docker on each node
   * Install CRI-dockerd on each node
