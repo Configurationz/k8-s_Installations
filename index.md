@@ -60,7 +60,7 @@ exit
 ```
 
 5. Relogin & initialize the cluster using the following command as a root user [Making one node master/control plane]
-```
+```bash
 sudo -i
 kubeadm init –pod-network-cidr=10.244.0.0/16 --cri-socket=unix:///var/run/cri-dockerd.sock
 ```
