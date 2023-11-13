@@ -3,10 +3,10 @@ kubernetes Installation steps for both Master & Nodes
 
 * Create few nodes (>1)
   * Install docker on each node
-  * Install cri-dockerd on each node
+  * Install CRI-dockerd on each node
   * Install kubeadm on each node
-  * Make one node master/control plane
-  * Add other nodes to the cluster
+  * Make one node Master/Control Plane
+  * Add all other nodes to the cluster
   * Install any CNI implementation _[Flannel](https://github.com/flannel-io/flannel/releases/latest/download/)_
 
 1. Install Docker on all the nodes
