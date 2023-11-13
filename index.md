@@ -51,7 +51,7 @@ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --
 ```
 echo ‘deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /’ | sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
-```
+```bash
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
@@ -60,7 +60,7 @@ exit
 ```
 
 5. Relogin & initialize the cluster using the following command as a root user [Making one node master/control plane]
-```bash
+```
 sudo -i
 kubeadm init –pod-network-cidr=10.244.0.0/16 --cri-socket=unix:///var/run/cri-dockerd.sock
 ```
