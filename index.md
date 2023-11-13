@@ -25,6 +25,7 @@ sudo dpkg -i cri-dockerd_0.3.4.3-0.ubuntu-focal_amd64.deb
 ```
 
 3. Install 'go' by executing below commands on all the nodes
+
 ```bash
 sudo -i
 wget https://go.dev/dl/go1.21.1.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz
