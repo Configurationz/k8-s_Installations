@@ -105,7 +105,7 @@ kubectl get nodes
 
 8. kuberentes needs CNI Plugin so that pod-network is enabled. Untill this is done, the DNS doesn't work, services donot work so the status of the nodes shows 'NotReady'. Install any CNI implementation _(Flannel)_
 
-9. Let's use flannel, Execute the following on master node
+9. For k8s networking, the reference specification is CNI. There are many vendors who implement this _[Addons Installations](https://kubernetes.io/docs/concepts/cluster-administration/addons/)_. We are going to use _[flannel](https://github.com/flannel-io/flannel#deploying-flannel-manually)_  Let's execute the following on master node being a normal user
 ```
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
@@ -120,6 +120,12 @@ kubectl get nodes -w
 source <(kubectl completion bash)
 echo "source <(kubectl completion bash)" >> ~/.bashrc
 ```
+
+12. After the successful installation of flannel on Master/Control Plane, execute the following command on all other nodes as a root user allowing them to join the cluster
+```
+kubeadm join 172.31.25.16:6443 --token sz14lp.jwkx2vy49w54fk79 \
+        --discovery-token-ca-cert-hash sha256:25fe0576979b9306d911139f22c47f02240ab63731619a745b0e396ddf9fbe46 --cri-socket "unix:///var/run/cri-dockerd.sock"
+``` 
 
 * Some useful commands –
 

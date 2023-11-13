@@ -65,7 +65,7 @@ kubeadm join 172.31.25.16:6443 --token sz14lp.jwkx2vy49w54fk79 \
         --discovery-token-ca-cert-hash sha256:25fe0576979b9306d911139f22c47f02240ab63731619a745b0e396ddf9fbe46
 ```
 
-6. Copy the node joining command mentioned in the output and also add ```--cri-socket "unix:///var/run/cri-dockerd.sock"``` at the end. And execute them in all the nodes except Master
+6. Copy the node joining command mentioned in the output and also add ```--cri-socket "unix:///var/run/cri-dockerd.sock"``` at the end. And execute this command as a root user in all the nodes except Master
 ```
 kubeadm join 172.31.25.16:6443 --token sz14lp.jwkx2vy49w54fk79 \
         --discovery-token-ca-cert-hash sha256:25fe0576979b9306d911139f22c47f02240ab63731619a745b0e396ddf9fbe46 --cri-socket "unix:///var/run/cri-dockerd.sock"
