@@ -64,7 +64,8 @@ exit
 sudo -i
 kubeadm init –pod-network-cidr=10.244.0.0/16 --cri-socket=unix:///var/run/cri-dockerd.sock
 ```
-```
+
+```bash
 Your Kubernetes control-plane has initialized successfully!
 
 To start using your cluster, you need to run the following as a regular user:
