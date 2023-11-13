@@ -25,7 +25,7 @@ wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.4/cri-docker
 sudo dpkg -i cri-dockerd_0.3.4.3-0.ubuntu-focal_amd64.deb
 ```
 
-3. Install 'go' by executing below commands on all the nodes
+3. Install _[go](https://go.dev/doc/install)_ by executing below commands on all the nodes _[go Installations]( https://github.com/Mirantis/cri-dockerd.git)_
 ```bash
 sudo -i
 wget https://go.dev/dl/go1.21.1.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz
@@ -43,7 +43,7 @@ systemctl enable cri-docker.service
 systemctl enable --now cri-docker.socket
 ```
 
-4. Next, install the following components _**(kubelet, kubeadm & kubectl)**_ on all the nodes in the cluster
+4. Next, install the following components _[kubeadm, kubelet and kubectl](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl)_ on all the nodes in the cluster
 ```bash
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl
@@ -115,13 +115,13 @@ kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/
 kubectl get nodes -w 
 ```
 
-11.  Autocomplete kubectl commands in command line (kubectl cheat sheet) 
+11.  Autocomplete kubectl commands in command line _[kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)_
 ```bash
 source <(kubectl completion bash)
 echo "source <(kubectl completion bash)" >> ~/.bashrc
 ```
 
-12. After the successful installation of flannel on Master/Control Plane, execute the following command on all other nodes as a root user allowing them to join the cluster
+12. After the successful installation of flannel on Master/control-plane, execute the following command on all other nodes as a root user allowing them to join the cluster
 ```
 kubeadm join 172.31.25.16:6443 --token sz14lp.jwkx2vy49w54fk79 \
         --discovery-token-ca-cert-hash sha256:25fe0576979b9306d911139f22c47f02240ab63731619a745b0e396ddf9fbe46 --cri-socket "unix:///var/run/cri-dockerd.sock"
