@@ -158,3 +158,5 @@ kubectl describe pods <pod-name>
 ```
 kubectl delete-f xyz.yaml
 ```
+
+![Preview](./imgs/partyk8s.gif)
