@@ -89,7 +89,7 @@ kubeadm join 172.31.25.16:6443 --token sz14lp.jwkx2vy49w54fk79 \
         --discovery-token-ca-cert-hash sha256:25fe0576979b9306d911139f22c47f02240ab63731619a745b0e396ddf9fbe46
 ```
 
-6. On the master node, to run kubectl as a normal user, execute the following as non root user _[i.e., '$' terminal]_
+6. On the master node, to run kubectl as a normal user, execute the following commands as non-root user
 ```bash
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -108,12 +108,12 @@ kubectl get nodes
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
 
-10. Check if the status of all the nodes including master is ready
+10.  Check if the status of all the nodes including master is ready
 ```
 kubectl get nodes -w 
 ```
 
-11. Autocomplete kubectl commands in command line (kubectl cheat sheet) 
+11.  Autocomplete kubectl commands in command line (kubectl cheat sheet) 
 ```bash
 source <(kubectl completion bash)
 echo "source <(kubectl completion bash)" >> ~/.bashrc
