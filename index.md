@@ -1,6 +1,4 @@
 
-![Preview](./imgs/realk8(Custom).png)
-
 kubernetes Installation steps for both Master & Nodes 
 ------------------------------------------------------
 
