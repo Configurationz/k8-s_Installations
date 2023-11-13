@@ -25,7 +25,6 @@ sudo dpkg -i cri-dockerd_0.3.4.3-0.ubuntu-focal_amd64.deb
 ```
 
 3. Install 'go' by executing below commands on all the nodes
-
 ```bash
 sudo -i
 wget https://go.dev/dl/go1.21.1.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz
@@ -45,7 +44,6 @@ systemctl enable --now cri-docker.socket
 ```
 
 4. Next, install the following components _**(kubelet, kubeadm & kubectl)**_ on all the nodes in the cluster
-
 ```bash
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl
@@ -62,12 +60,10 @@ exit
 ```
 
 5. Relogin & initialize the cluster using the following command as a root user [Making one node master/control plane]
-
 ```bash
 sudo -i
 kubeadm init –pod-network-cidr=10.244.0.0/16 --cri-socket=unix:///var/run/cri-dockerd.sock
 ```
-
 _OUTPUT:_
 ```php
 Your Kubernetes control-plane has initialized successfully!
@@ -105,17 +101,18 @@ kubectl get nodes
 ```
 
 8. kuberentes needs CNI Plugin so that pod-network is enabled. Untill this is done, the DNS doesn't work, services donot work so the status of the nodes shows 'NotReady'. Install any CNI implementation _(Flannel)_
-Let's use flannel, Execute the following on master node 
+
+9. Let's use flannel, Execute the following on master node
 ```
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
 
-9. Check if the status of all the nodes including master is ready
+10. Check if the status of all the nodes including master is ready
 ```
 kubectl get nodes -w 
 ```
 
-10. Autocomplete kubectl commands in command line (kubectl cheat sheet) 
+11. Autocomplete kubectl commands in command line (kubectl cheat sheet) 
 ```bash
 source <(kubectl completion bash)
 echo "source <(kubectl completion bash)" >> ~/.bashrc
