@@ -1,7 +1,8 @@
-kubernetes Installation steps for both Master & Nodes 
-------------------------------------------------------
 
 ![Preview](./imgs/realk8.png)
+
+kubernetes Installation steps for both Master & Nodes 
+------------------------------------------------------
 
 * Create few nodes (>1)
   * Install docker on each node
