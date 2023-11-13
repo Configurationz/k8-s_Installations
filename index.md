@@ -83,8 +83,8 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join 172.31.25.16:6443 --token sz14lp.jwkx2vy49w54fk79 \
-        --discovery-token-ca-cert-hash sha256:25fe0576979b9306d911139f22c47f02240ab63731619a745b0e396ddf9fbe46
+kubeadm join 172.31.14.130:6443 --token zz7um7.dy22vb0xppw1jy05 \
+        --discovery-token-ca-cert-hash sha256:486c786fa26ee4e54144955a48cc1631082a14555622ac2818dc32438a104198
 ```
 
 6. On the master node, to run kubectl as a normal user, execute the following as non root user _[i.e., '$' terminal]_
