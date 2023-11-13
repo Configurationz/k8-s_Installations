@@ -18,7 +18,7 @@ exit
 ```
 
 2. Install CRI-dockerd, below steps are specific to ubuntu 20.04
-[Refer Here](https://github.com/Mirantis/cri-dockerd/releases)
+_[Refer Here](https://github.com/Mirantis/cri-dockerd/releases)_
 ```
 wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.4/cri-dockerd_0.3.4.3-0.ubuntu-focal_amd64.deb
 sudo dpkg -i cri-dockerd_0.3.4.3-0.ubuntu-focal_amd64.deb
@@ -45,6 +45,7 @@ systemctl enable --now cri-docker.socket
 ```
 
 4. Next, install the following components _**(kubelet, kubeadm & kubectl)**_ on all the nodes in the cluster
+
 ```bash
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl
@@ -61,10 +62,12 @@ exit
 ```
 
 5. Relogin & initialize the cluster using the following command as a root user [Making one node master/control plane]
+
 ```bash
 sudo -i
 kubeadm init –pod-network-cidr=10.244.0.0/16 --cri-socket=unix:///var/run/cri-dockerd.sock
 ```
+
 _OUTPUT:_
 ```php
 Your Kubernetes control-plane has initialized successfully!
