@@ -163,7 +163,10 @@ kubectl get pods <pod-name> -o yaml
 kubectl describe pods <pod-name>
 ```
 ```
-kubectl delete-f xyz.yaml
+kubectl delete -f xyz.yaml
+```
+```
+kubectl delete pods <pod-name>
 ```
 
 <p style="text-align: center"><img src="./imgs/partyk8s.gif"></p>
