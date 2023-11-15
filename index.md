@@ -175,4 +175,5 @@ kubectl delete pods <pod-name>
 
 <p style="text-align: center"><img src="./imgs/wheeling-k8s.gif"></p>
 
-# ![Preview](imgs/partyk8s.gif)
+ <!-- ![Preview](imgs/partyk8s.gif) -->
+
