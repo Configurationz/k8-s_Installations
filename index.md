@@ -174,3 +174,7 @@ kubectl delete pods <pod-name>
 * _[Imperative Commands](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run)_
 
 <p style="text-align: center"><img src="./imgs/partyk8s.gif"></p>
+
+![](imgs/wheeling-k8s.gif)
+
+![](imgs/partytimek8s.gif)
