@@ -179,7 +179,6 @@ kubectl logs <pod-name>
 
 _**[Imperative Commands](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run){:target="_blank"}**_
 
-<p style="text-align: center"><img src="./imgs/k8s-cw.gif"></p>
 
 <p align="center">
       <img src="imgs/output.gif" align="left">
@@ -187,4 +186,4 @@ _**[Imperative Commands](https://kubernetes.io/docs/reference/generated/kubectl/
       <img src="imgs/new-k8s-anti-cw.gif" align="right">
 </p>
 
-<p style="text-align: center"><img src="./imgs/k8s-cw.gif"></p>
+<!-- <p style="text-align: center"><img src="./imgs/k8s-cw.gif"></p> -->
