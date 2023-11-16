@@ -168,6 +168,12 @@ kubectl delete -f xyz.yaml
 ```
 kubectl delete pods <pod-name>
 ```
+```
+kubectl get po -n kube-system -w
+```
+```
+kubectl logs <pod-name>
+```
 
 ### References:
 
