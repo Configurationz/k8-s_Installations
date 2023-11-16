@@ -184,4 +184,4 @@ _**[Imperative Commands](https://kubernetes.io/docs/reference/generated/kubectl/
  ![Preview](imgs/kubernetes_intensifies.gif)
 
 
- ![Preview](imgs/kubectl.gif)
+ ![Preview](imgs/k8s-cw.gif)
