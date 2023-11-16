@@ -179,9 +179,8 @@ kubectl logs <pod-name>
 
 _**[Imperative Commands](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run){:target="_blank"}**_
 
-<p style="text-align: center"><img src="./imgs/wheeling-k8s.gif"></p>
+<p style="text-align: center"><img src="./imgs/k8s-cw.gif"></p>
 
  ![Preview](imgs/kubernetes_intensifies.gif)
 
 
- ![Preview](imgs/k8s-cw.gif)
