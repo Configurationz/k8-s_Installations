@@ -183,7 +183,7 @@ _**[Imperative Commands](https://kubernetes.io/docs/reference/generated/kubectl/
 
 <p align="center">
       <img src="imgs/output.gif" align="left">
-      <img src="imgs/transparent-output.gif">
+      <img src="imgs/transparent-cw.gif">
       <img src="imgs/new-k8s-anti-cw.gif" align="right">
 </p>
 
