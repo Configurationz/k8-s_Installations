@@ -177,8 +177,9 @@ kubectl logs <pod-name>
 
 ### References:
 
-_**[Imperative Commands](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run){:target="_blank"}**_
+_**[Kubernetes Networking Model](https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/){:target="_blank"}**_
 
+_**[Imperative Commands](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run){:target="_blank"}**_
 
 <p align="center">
       <img src="imgs/output.gif" align="left">
