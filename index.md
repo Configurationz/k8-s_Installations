@@ -175,7 +175,7 @@ kubectl get po -n kube-system -w
 kubectl logs <pod-name>
 ```
 
-### References:
+### References ~
 
 _**[Kubernetes Networking Model](https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/){:target="_blank"}**_
 
