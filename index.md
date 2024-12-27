@@ -24,8 +24,8 @@ exit
 2. Install CRI-dockerd, below steps are specific to ubuntu 20.04
 _[Refer Here](https://github.com/Mirantis/cri-dockerd/releases)_
 ```
-wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.4/cri-dockerd_0.3.4.3-0.ubuntu-focal_amd64.deb
-sudo dpkg -i cri-dockerd_0.3.4.3-0.ubuntu-focal_amd64.deb
+wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.16/cri-dockerd_0.3.16.3-0.ubuntu-focal_amd64.deb
+sudo dpkg -i cri-dockerd_0.3.16.3-0.ubuntu-focal_amd64.deb
 ```
 
 3. Install _[go](https://go.dev/doc/install)_ by executing below commands on all the nodes _[go Installations]( https://github.com/Mirantis/cri-dockerd)_
