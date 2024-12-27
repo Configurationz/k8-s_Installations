@@ -31,7 +31,7 @@ sudo dpkg -i cri-dockerd_0.3.16.3-0.ubuntu-focal_amd64.deb
 3. Install _[go](https://go.dev/doc/install)_ by executing below commands on all the nodes _[go Installations]( https://github.com/Mirantis/cri-dockerd)_
 ```bash
 sudo -i
-wget https://go.dev/dl/go1.21.1.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.23.4.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.23.4.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 git clone https://github.com/Mirantis/cri-dockerd.git
 cd cri-dockerd
