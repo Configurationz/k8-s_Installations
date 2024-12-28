@@ -131,8 +131,31 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc
 kubeadm join 172.31.25.16:6443 --token sz14lp.jwkx2vy49w54fk79 \
         --discovery-token-ca-cert-hash sha256:25fe0576979b9306d911139f22c47f02240ab63731619a745b0e396ddf9fbe46 --cri-socket "unix:///var/run/cri-dockerd.sock"
 ``` 
+### Issue ~
+* If you are getting the following error while joining the nodes to the cluster
+```Bash
+[preflight] Running pre-flight checks
+error execution phase preflight: [preflight] Some fatal errors occurred:
+        [ERROR FileContent--proc-sys-net-bridge-bridge-nf-call-iptables]: /proc/sys/net/bridge/bridge-nf-call-iptables does not exist
+[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
+To see the stack trace of this error execute with --v=5 or higher
+```
 
-* Some useful commands –
+### Resolution ~
+
+[kubeadm complains about bridge-nf-call and ip_forward if not using docker runtime #1062](https://github.com/kubernetes/kubeadm/issues/1062)
+
+* Execute the following commands in worker nodes as a root 
+```
+modprobe br_netfilter
+```
+```
+echo '1' > /proc/sys/net/ipv4/ip_forward
+```
+* Then, try to join the nodes to the cluster
+
+
+### Some useful commands –
 
 ```
 kubectl get no
