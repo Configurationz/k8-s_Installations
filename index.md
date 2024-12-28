@@ -16,7 +16,7 @@ kubernetes Installation in ubuntu 20.04 for both Master & Nodes
 1. Install Docker on all the nodes
 ```bash
 sudo apt update
-curl -fsSL https://get.docker.com -o install-docker.sh && sh install-docker.sh
+curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
 sudo usermod -aG docker ubuntu
 exit
 ```
