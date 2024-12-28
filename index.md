@@ -46,7 +46,7 @@ systemctl enable cri-docker.service
 systemctl enable --now cri-docker.socket
 ```
 
-4. Next, install the following components _[kubeadm, kubelet and kubectl](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl)_ on all the nodes in the cluster being a root user
+4. Next, install the following components _[kubeadm, kubelet and kubectl](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)_ on all the nodes in the cluster being a root user
 ```bash
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl
