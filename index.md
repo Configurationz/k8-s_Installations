@@ -44,6 +44,8 @@ sed -i -e 's,/usr/bin/cri-dockerd,/usr/local/bin/cri-dockerd,' /etc/systemd/syst
 systemctl daemon-reload
 systemctl enable cri-docker.service
 systemctl enable --now cri-docker.socket
+exit
+exit
 ```
 
 4. Next, install the following components _[kubeadm, kubelet and kubectl](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)_ on all the nodes in the cluster being a root user
